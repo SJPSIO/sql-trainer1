@@ -220,7 +220,7 @@ export const tasksList: Task[] = [
     topic: "groupBy",
     database: "music",
     referenceSql:
-      "SELECT unit_price, COUNT(*) FROM tracks GROUP BY unit_price ORDER BY COUNT(*) ASC;",
+      "SELECT unit_price, COUNT(*) FROM tracks GROUP BY unit_price ORDER BY unit_price ASC;",
     tables: ["tracks"],
   },
   // Select count group by ordered limited
@@ -246,7 +246,7 @@ export const tasksList: Task[] = [
     topic: "join",
     database: "music",
     referenceSql:
-      "SELECT tracks.name, albums.title FROM albums JOIN tracks ON tracks.album_id = albums.id;",
+      "SELECT albums.title, tracks.name FROM albums JOIN tracks ON tracks.album_id = albums.id;",
     tables: ["tracks", "albums"],
   },
   // Join ordered
