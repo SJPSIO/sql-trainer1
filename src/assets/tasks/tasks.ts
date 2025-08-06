@@ -12,14 +12,14 @@ export interface Task {
 
 export const tasksList: Task[] = [
   // Simple select *
-  {
+  { // Task 1
     id: "select_all_invoices",
     topic: "select",
     database: "accounting",
     referenceSql: "SELECT * FROM invoices;",
     tables: ["invoices"],
   },
-  {
+  { // Task 2
     id: "select_all_artists",
     topic: "select",
     database: "music",
@@ -27,14 +27,14 @@ export const tasksList: Task[] = [
     tables: ["artists"],
   },
   // Select with attributes
-  {
+  { // Task 3
     id: "select_all_artists_names",
     topic: "select",
     database: "music",
     referenceSql: "SELECT name FROM artists;",
     tables: ["artists"],
   },
-  {
+  { // Task 4
     id: "select_first_and_last_name_of_employees",
     topic: "select",
     database: "accounting",
@@ -42,7 +42,7 @@ export const tasksList: Task[] = [
     tables: ["employees"],
   },
   // Select with ordering
-  {
+  { // Task 5
     id: "select_employees_sorted_by_hire_date_desc",
     topic: "select",
     database: "accounting",
@@ -50,6 +50,7 @@ export const tasksList: Task[] = [
     tables: ["employees"],
   },
   {
+    // Task 6
     id: "select_first_and_last_name_of_employees_sorted_by_hire_date_asc",
     topic: "select",
     database: "accounting",
@@ -58,6 +59,7 @@ export const tasksList: Task[] = [
     tables: ["employees"],
   },
   {
+    // Task 7
     id: "select_names_and_length_of_tracks_sorted_by_names_and_milliseconds",
     topic: "select",
     database: "music",
@@ -67,6 +69,7 @@ export const tasksList: Task[] = [
   },
   // Select with simple where
   {
+    // Task 8
     id: "select_employees_title_support_agent",
     topic: "select",
     database: "accounting",
@@ -76,6 +79,7 @@ export const tasksList: Task[] = [
   },
   // Select with where >, < and between
   {
+    // Task 9
     id: "select_tracks_bigger_than_100000000_bytes",
     topic: "select",
     database: "music",
@@ -83,6 +87,7 @@ export const tasksList: Task[] = [
     tables: ["tracks"],
   },
   {
+    // Task 10
     id: "select_tracks_smaller_than_500000_bytes",
     topic: "select",
     database: "music",
