@@ -94,7 +94,7 @@ export const tasksList: Task[] = [
     referenceSql: "SELECT name FROM tracks WHERE bytes < 500000;",
     tables: ["tracks"],
   },
-  {
+  { // Task 11
     id: "select_tracks_between_500000_and_5000000_bytes",
     topic: "select",
     database: "music",
@@ -103,7 +103,7 @@ export const tasksList: Task[] = [
     tables: ["tracks"],
   },
   // Select with dates
-  {
+  { // Task 12
     id: "select_employees_before_15_feb_2011",
     topic: "select",
     database: "accounting",
@@ -112,21 +112,21 @@ export const tasksList: Task[] = [
     tables: ["employees"],
   },
   // Select with LIKE
-  {
+  {  // Task 13
     id: "select_employees_last_names_starting_with_A",
     topic: "select",
     database: "accounting",
     referenceSql: "SELECT * FROM employees WHERE last_name LIKE 'A%';",
     tables: ["employees"],
   },
-  {
+  { // Task 14
     id: "select_employees_first_names_ending_with_a",
     topic: "select",
     database: "accounting",
     referenceSql: "SELECT * FROM employees WHERE first_name LIKE '%a';",
     tables: ["employees"],
   },
-  {
+  { // Task 15
     id: "select_employees_with_address_contains_Ave",
     topic: "select",
     database: "accounting",
@@ -134,7 +134,7 @@ export const tasksList: Task[] = [
     tables: ["employees"],
   },
   // Select with AND and OR
-  {
+  { // Task 16
     id: "select_invoices_from_canada_ab",
     topic: "select",
     database: "accounting",
@@ -142,7 +142,7 @@ export const tasksList: Task[] = [
       "SELECT * FROM invoices WHERE billing_country = 'Canada' AND billing_state = 'AB';",
     tables: ["invoices"],
   },
-  {
+  { // Task 17
     id: "select_invoices_from_nv_reno_with_total_more_than_5",
     topic: "select",
     database: "accounting",
@@ -150,7 +150,7 @@ export const tasksList: Task[] = [
       "SELECT * FROM invoices WHERE billing_state = 'NV' AND billing_city = 'Reno' AND total > 5;",
     tables: ["invoices"],
   },
-  {
+  { // Task 18
     id: "select_invoices_from_states_nv_or_ab",
     topic: "select",
     database: "accounting",
@@ -159,14 +159,14 @@ export const tasksList: Task[] = [
     tables: ["invoices"],
   },
   // Select with NULL
-  {
+  { // Task 19
     id: "select_tracks_without_composer",
     topic: "select",
     database: "music",
     referenceSql: "SELECT * FROM tracks WHERE composer IS NULL;",
     tables: ["tracks"],
   },
-  {
+  { // Task 20
     id: "select_customers_with_company",
     topic: "select",
     database: "accounting",
@@ -174,7 +174,7 @@ export const tasksList: Task[] = [
     tables: ["customers"],
   },
   // Select ordered tops
-  {
+  { // Task 21
     id: "select_invoices_germany_ordered_total_desc_limit_3",
     topic: "select",
     database: "accounting",
@@ -182,7 +182,7 @@ export const tasksList: Task[] = [
       "SELECT * FROM invoices WHERE billing_country = 'Germany' ORDER BY total DESC LIMIT 3;",
     tables: ["invoices"],
   },
-  {
+  { // Task 22
     id: "select_billing_address_invoices_ca_cupertino_ordered_total_desc_limit_3",
     topic: "select",
     database: "accounting",
@@ -190,7 +190,7 @@ export const tasksList: Task[] = [
       "SELECT billing_address FROM invoices WHERE billing_state = 'CA' AND billing_city = 'Cupertino' ORDER BY total DESC LIMIT 3;",
     tables: ["invoices"],
   },
-  {
+  { // Task 23
     id: "select_id_invoices_ca_cupertino_or_mountain_view",
     topic: "select",
     database: "accounting",
@@ -199,14 +199,14 @@ export const tasksList: Task[] = [
     tables: ["invoices"],
   },
   // Select count group by
-  {
+  { // Task 24
     id: "count_customers_by_country",
     topic: "groupBy",
     database: "accounting",
     referenceSql: "SELECT country, COUNT(*) FROM customers GROUP BY country;",
     tables: ["customers"],
   },
-  {
+  { // Task 25
     id: "count_tracks_by_unit_price",
     topic: "groupBy",
     database: "music",
@@ -215,7 +215,7 @@ export const tasksList: Task[] = [
     tables: ["tracks"],
   },
   // Select count group by ordered
-  {
+  { // Task 26
     id: "count_tracks_by_unit_price_ordered_asc",
     topic: "groupBy",
     database: "music",
@@ -224,7 +224,7 @@ export const tasksList: Task[] = [
     tables: ["tracks"],
   },
   // Select count group by ordered limited
-  {
+  { // Task 27
     id: "count_tracks_by_unit_price_ordered_asc_limit_1",
     topic: "groupBy",
     database: "music",
@@ -233,7 +233,7 @@ export const tasksList: Task[] = [
     tables: ["tracks"],
   },
   // Join
-  {
+  { // Task 28
     id: "join_artists_names_and_album_titles",
     topic: "join",
     database: "music",
@@ -241,7 +241,7 @@ export const tasksList: Task[] = [
       "SELECT artists.name, albums.title FROM artists JOIN albums ON albums.artist_id = artists.id;",
     tables: ["artists", "albums"],
   },
-  {
+  { // Task 29
     id: "join_album_titles_and_tracks_titles",
     topic: "join",
     database: "music",
@@ -250,7 +250,7 @@ export const tasksList: Task[] = [
     tables: ["tracks", "albums"],
   },
   // Join ordered
-  {
+  { // Task 30
     id: "join_artists_names_and_album_titles_ordered_artists_name_desc",
     topic: "join",
     database: "music",
@@ -258,7 +258,7 @@ export const tasksList: Task[] = [
       "SELECT artists.name, albums.title FROM artists JOIN albums ON albums.artist_id = artists.id ORDER BY artists.name DESC;",
     tables: ["artists", "albums"],
   },
-  {
+  { // Task 31
     id: "join_customer_name_and_total_ordered_by_total",
     topic: "join",
     database: "accounting",
@@ -267,7 +267,7 @@ export const tasksList: Task[] = [
     tables: ["customers", "invoices"],
   },
   // Join where
-  {
+  { // Task 32
     id: "select_all_aerosmith_albums",
     topic: "join",
     database: "music",
@@ -275,7 +275,7 @@ export const tasksList: Task[] = [
       "SELECT albums.title FROM albums JOIN artists ON artists.id = albums.artist_id WHERE artists.name = 'Aerosmith';",
     tables: ["albums", "artists"],
   },
-  {
+  { // Task 33
     id: "select_all_albums_with_midnight_track",
     topic: "join",
     database: "music",
@@ -284,7 +284,7 @@ export const tasksList: Task[] = [
     tables: ["albums", "tracks"],
   },
   // Double join
-  {
+  { // Task 34
     id: "select_all_artists_with_midnight_track",
     topic: "join",
     database: "music",
@@ -293,7 +293,7 @@ export const tasksList: Task[] = [
     tables: ["artists", "albums", "tracks"],
   },
   // Join count
-  {
+  { // Task 35
     id: "count_iron_maiden_albums",
     topic: "join",
     database: "music",
@@ -302,7 +302,7 @@ export const tasksList: Task[] = [
     tables: ["artists", "albums"],
   },
   // Join group by
-  {
+  { // Task 36
     id: "count_each_albums_of_artists",
     topic: "join",
     database: "music",
@@ -310,7 +310,7 @@ export const tasksList: Task[] = [
       "SELECT artists.name, COUNT(*) FROM artists JOIN albums ON artists.id = albums.artist_id GROUP BY artists.id;",
     tables: ["artists", "albums"],
   },
-  {
+  { // Task 37
     id: "artist_with_max_albums",
     topic: "join",
     database: "music",
@@ -319,7 +319,7 @@ export const tasksList: Task[] = [
     tables: ["artists", "albums"],
   },
   // Join aggregate
-  {
+  { // Task 38
     id: "select_top5_clients_with_most_sum_of_invoices",
     topic: "join",
     database: "accounting",
