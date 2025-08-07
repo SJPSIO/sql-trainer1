@@ -1,7 +1,7 @@
 import { createAction, createReducer } from "@reduxjs/toolkit";
 
 export type ThemeType = "light" | "dark" | "system";
-export type LanguageType = "en" | "ru";
+export type LanguageType = "en" | "fr";
 
 interface SettingsState {
   theme: ThemeType;
